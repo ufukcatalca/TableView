@@ -12,4 +12,5 @@
 
 
 @property(nonatomic,strong)NSArray *listem;
+@property(nonatomic,strong)NSArray *resimler;
 @end

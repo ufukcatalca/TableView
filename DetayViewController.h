@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  DetayViewController.h
 //  TableViewTutorial
 //
 //  Created by Mac on 08/06/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface DetayViewController : UIViewController
 
 @end
-

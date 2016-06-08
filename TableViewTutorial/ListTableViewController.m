@@ -19,20 +19,18 @@
     
     
     self.title=@"NavigationBar Title";
-    self.listem = @[@"deger 1",@"deger 2",@"deger 3",@"deger4"];
+    self.listem = @[@"Çöp Kutusu",@"Beyin",@"Chat",@"Diagram",@"idea",@"Horse"];
+    self.resimler =@[@"basket.png",@"brain.png",@"chat.png",@"diagram.png",@"idea.png",@"horse.png"];
+    
     
 }
 
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-
-    return 1;
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.listem count]; // dizimdeki eleman kadar deger oluştur
+    return [self.listem count]/2; // dizimdeki eleman kadar deger oluştur
 }
 
 
@@ -44,18 +42,61 @@
     
     if (cell==nil) {
         
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MainCell"];
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"MainCell"];
         
     }
     
-    cell.textLabel.text= self.listem[indexPath.row];
+    NSString *stringForCell;
+    if (indexPath.section == 0) {
+        stringForCell= [_listem objectAtIndex:indexPath.row];
+
+        
+    }
+    else if (indexPath.section == 1){
+        stringForCell= [_listem objectAtIndex:indexPath.row+ [_listem count]/2];
+
+    }
+    
+    [cell.textLabel setText:stringForCell];
+       cell.imageView.image = [UIImage imageNamed:[_resimler objectAtIndex:indexPath.row]];
+    
     return cell;
 }
 
+
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 2;
+}
+
+
+
+
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     
+    NSString *headerTitle;
     
-    return @"Section Title";
+    if (section==0) {
+        headerTitle = @"Section 1 Header";
+    }
+    else{
+        headerTitle = @"Section 2 Header";
+        
+    }
+    return headerTitle;
+    
+}
+
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    NSLog(@"tıklandı");
+    
+    
+    
+    
+    
 }
 
 
