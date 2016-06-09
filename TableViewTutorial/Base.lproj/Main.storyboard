@@ -37,9 +37,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="btu-Og-hWp" kind="push" id="giu-Ea-ZZj"/>
-                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="Txj-HS-A3l">
                                 <rect key="frame" x="0.0" y="136" width="320" height="44"/>
@@ -64,7 +61,13 @@
                             <outlet property="delegate" destination="VOm-9D-6Cr" id="AKU-ye-Eyc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="GbR-74-ToO"/>
+                    <navigationItem key="navigationItem" id="GbR-74-ToO">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="Mtq-02-HJO">
+                            <connections>
+                                <segue destination="btu-Og-hWp" kind="push" id="2Jx-aF-WgA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b5S-vs-2zh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

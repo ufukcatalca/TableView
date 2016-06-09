@@ -17,12 +17,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    //başlık kısmı
     self.title=@"NavigationBar Title";
+    //ilk array yazılar burada yer alıyor
     self.listem = @[@"Çöp Kutusu",@"Beyin",@"Chat",@"Diagram",@"idea",@"Horse"];
+    // resimler için array resimler burada yer alıyor
     self.resimler =@[@"basket.png",@"brain.png",@"chat.png",@"diagram.png",@"idea.png",@"horse.png"];
     
     
+    //Navigationbar'in stil işlemleri
+    self.navigationController.navigationBar.barTintColor = [UIColor yellowColor];
+    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor blackColor]}];
+    self.navigationController.navigationBar.translucent = NO;
 }
 
 
@@ -91,7 +98,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    NSLog(@"tıklandı");
+    NSLog(@" Satıra Tıklandı");
     
     
     
