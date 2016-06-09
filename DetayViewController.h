@@ -11,6 +11,7 @@
 @interface DetayViewController : UIViewController
 
 @property (weak, nonatomic) NSString *detayText;
+@property(weak,nonatomic)NSString *imageStack;
 
 @property (weak, nonatomic) IBOutlet UIImageView *detayImage;
 

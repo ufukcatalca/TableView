@@ -12,7 +12,10 @@
 @interface ListTableViewController ()
 @end
 
-@implementation ListTableViewController
+@implementation ListTableViewController{
+    
+
+}
 
 
 - (void)viewDidLoad {
@@ -113,7 +116,9 @@
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         
         DetayViewController *destViewController = segue.destinationViewController;
-        destViewController.detayTextLabel = [_listem objectAtIndex:indexPath.row];
+        destViewController.detayText = [_listem objectAtIndex:indexPath.row];
+        destViewController.imageStack = [_resimler objectAtIndex:indexPath.row];
+
     }
 }
 

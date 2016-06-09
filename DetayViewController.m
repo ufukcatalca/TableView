@@ -12,7 +12,6 @@
 
 @end
 
-
 @implementation DetayViewController
 
 
@@ -25,6 +24,7 @@
 
     
       self.detayTextLabel.text = self.detayText;
+    self.detayImage.image = [UIImage imageNamed:self.imageStack];
 }
 
 - (void)didReceiveMemoryWarning {
