@@ -12,13 +12,19 @@
 
 @end
 
+
 @implementation DetayViewController
+
+
+@synthesize detayTextLabel;
+@synthesize detayText;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.title= @"Detay Sayfası";
-
+    
+      self.detayTextLabel.text = self.detayText;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -10,4 +10,10 @@
 
 @interface DetayViewController : UIViewController
 
+@property (weak, nonatomic) NSString *detayText;
+
+@property (weak, nonatomic) IBOutlet UIImageView *detayImage;
+
+@property (weak, nonatomic) IBOutlet UILabel *detayTextLabel;
+
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "ListTableViewController.h"
+#import "DetayViewController.h"
 
 @interface ListTableViewController ()
 @end
@@ -100,11 +101,24 @@
     
     NSLog(@" Satıra Tıklandı");
     
-    
-    
-    
+    [self performSegueWithIdentifier:@"detay" sender:self];
     
 }
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"detay"]) {
+        
+        
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        
+        DetayViewController *destViewController = segue.destinationViewController;
+        destViewController.detayTextLabel = [_listem objectAtIndex:indexPath.row];
+    }
+}
+
+
+
 
 
 @end
